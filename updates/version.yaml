@@ -1,0 +1,9 @@
+1.0.0:
+    - First version of Blog with RJGallery
+    - create_news_gallery_field.php
+1.0.1:
+    - Fix for plugin uninstall
+1.0.2:
+    - Изменения для news
+1.0.3:
+    - Создан компонент newsGalleriesList являющийся заменой galleriesList (RJ Gallery) оснащенной сортировкой

@@ -1,0 +1,15 @@
+<div class="row">
+    {% for gallery in galleries %}
+    {#{ dump(gallery) }#}
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb gallery-{{gallery.id}}">
+        {{ dump(gallery.slug) }}
+        <a href="{{gallery.url}}">
+            {% for image in gallery.images |slice(0, 1) %}
+            <img class="img-fluid" src="{{ image.getThumb(540, 540, 'crop') }}" alt="{{ image.title }}"/>
+            <!-- <img class="img-fluid" src="{{ image.path }}" alt="{{ image.title }}" /> -->
+            {% endfor %}
+            <h5>{{gallery.name}}</h5>
+        </a>
+    </div>
+    {% endfor %}
+</div>
